@@ -83,6 +83,7 @@
 				}
 				if (location < 0) {
 					// change speed to be positive 
+					speed = -speed
 				}
 			};
 
@@ -98,11 +99,14 @@
 				changeBoxText(points);
 				// if speed is positive, increse speed 
 				if (speed > 0) {
-
+					speed = speed + 3;
 				}
-				speed = speed + 3;
+
 				// is speed is negative, decrese speed
 				// speed = speed - 3;
+				if (speed < 0) {
+					speed = speed - 3;
+				}
 
 			};
 		})();
